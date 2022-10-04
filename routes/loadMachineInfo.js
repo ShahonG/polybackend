@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const machineData = require('../database/mongodb').machineData
 
+// export machineList and moduleList
 const machineList = [
   "E01-160",
   "E02-160",

@@ -1,5 +1,12 @@
 const mongoose = require('mongoose')
 
+const moduleSchema = new mongoose.Schema({
+    module: String,
+    cavity: Number,
+    cycleTime: Number,
+    pcs_hr: Number,
+});
+
 const insertSchema = new mongoose.Schema({
     MC_TON: String,
     module: String,
@@ -19,6 +26,7 @@ function getCurrentDate() {
 
 module.exports = { 
     schema: insertSchema,
+    moduleSchema: moduleSchema,
     getCurrentDate: getCurrentDate
 }
 
