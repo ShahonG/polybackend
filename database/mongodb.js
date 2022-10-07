@@ -1,15 +1,23 @@
 const mongoose = require('mongoose')
 
-const moduleSchema = new mongoose.Schema({
-    module: String,
-    cavity: Number,
-    cycleTime: Number,
+const moduleSchema = new mongoose.Schema({ // sheet 2 schema (for machine's detail)
+    customer: String,
+    part_no: String,
+    part_name: String,
+    mould_size: String,
+    cavity: String,
+    sale: Number,
+    ton_pd: String,
+    ct_sale: Number,
+    ct_pd: Number,
+    customer_part_no_part_name: String,
+    ct: Number,
     pcs_hr: Number,
 });
 
-const insertSchema = new mongoose.Schema({
+const insertSchema = new mongoose.Schema({ // employee insert schema (sheet 1)
     MC_TON: String,
-    module: String,
+    customer_part_no_part_name: String,
     product: String,    // format -> 20, 20 , second number is NG product
     product_2: String,  // -1 for null
     time: String,
@@ -25,7 +33,7 @@ function getCurrentDate() {
 }
 
 module.exports = { 
-    schema: insertSchema,
+    insertSchema: insertSchema,
     moduleSchema: moduleSchema,
     getCurrentDate: getCurrentDate
 }

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const machineData = require('../database/mongodb').machineData
 
 // export machineList and moduleList
+// get data from MongoDB
 const machineList = [
   "E01-160",
   "E02-160",

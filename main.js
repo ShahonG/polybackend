@@ -21,7 +21,8 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/insert', require('./routes/insert.js'))
+app.use('/insertRecord', require('./routes/insertRecord.js'))
+app.use('/insertModule', require('./routes/insertModule.js'))
 app.use('/loadMachineInfo', require('./routes/loadMachineInfo.js'))
 app.use('/loadDataList', require('./routes/loadDataList'))
 

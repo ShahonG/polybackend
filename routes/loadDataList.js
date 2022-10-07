@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const schema = require('../database/mongodb').schema
+const schema = require('../database/mongodb').insertSchema
 const getCurrentDate = require('../database/mongodb').getCurrentDate
 const _ = require('lodash')  // deep clone
 
